@@ -1,5 +1,6 @@
 import React from 'react'
 import './home.module.css'
+import Header from "./header"
 import { DiPhotoshop } from "react-icons/di"
 import { DiIllustrator } from "react-icons/di"
 import { TbBrandAdobeIndesign } from "react-icons/tb"
@@ -9,30 +10,21 @@ import { MdGames } from "react-icons/md"
 import { MdOutlineLocalMovies } from "react-icons/md"
 import { FaPersonSwimming } from "react-icons/fa6"
 import { SiAntdesign } from "react-icons/si"
-import { CiBasketball } from "react-icons/ci";
+import { CiBasketball } from "react-icons/ci"
 
 
 const Home = () => {
   return (
     <div className='bg-[url(32993994_840843081452.jpg)] flex flex-col bg-cover bg-no-repeat h-screen w-screen'>
-      <header className='fixed self-center bg-[#0000008f] p-6 mt-4 z-10 rounded-4xl'>
-        <nav className='flex justify-center items-center'>
-          <ul className='flex space-x-6 text-xl text-white'>
-            <li className=''><a href='#'>Home</a></li>
-            <li className=''><a href='#about'>About</a></li>
-            <li className=''><a href='#resume'>Resume</a></li>
-            <li className=''><a href='#portfolio'>Portfolio</a></li>
-          </ul>
-        </nav>
-      </header>
+      <Header />
 
       <main>
 
-        <section id='#' className='h-screen w-screen flex pl-30 justify-start place-content-center items-center text-white'>
+        <section id='home' className='h-screen w-screen flex pl-30 justify-start place-content-center items-center text-white'>
           <div className='flex flex-col gap-10'>
             <div>
-              <h1 className='text-7xl'>MADUEKE <br /> <span className='font-bold text-9xl'>KELVIN</span></h1>
-              <p className='text-4xl w-full tracking-[5px]'>Ui Ux and Graphic Designer</p>
+              <h1 className='text-6xl'>MADUEKE <br /> <span className='font-bold text-9xl'>KELVIN</span></h1>
+              <p className='text-2xl w-full tracking-[3px]'>UI/UX and Graphic Designer</p>
             </div>
             <div className='flex gap-5.5'>
               <button className='border-2 border-[cyan] text-2xl rounded-2xl pl-13 cursor-pointer p-2 pr-13'>Resume</button>
@@ -52,7 +44,7 @@ const Home = () => {
           <div className='flex flex-col gap-20 left-30 w-96 z-4 absolute'>
             <div className='flex flex-col items-center gap-4'>
               <h1 className='border-b-4 border-b-[cyan] pb-2 w-fit text-5xl'>ABOUT</h1>
-              <h2 className='text-xl text-white'> <a href='mailto:Maduekeugonna2@gmail.com'>Maduekeugonna2@gmail.com</a></h2>
+              <h2 className='text-xl border-b-[cyan] border-b-2'> <a href='mailto:Maduekeugonna2@gmail.com' className='text-white'>Maduekeugonna2@gmail.com</a></h2>
             </div>
 
             <div>

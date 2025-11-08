@@ -3,21 +3,25 @@ html {
 }
 
 body {
-  width: 100vw;
-  height: 100vh;
   background: black;
-}
-
-header {
-  backdrop-filter: blur(10px);
-  box-shadow: 0px 0px 2px whitesmoke;
 }
 
 a {
   text-decoration: none;
-  color: cyan;
+  transition: all 0.3s ease;
 }
 
-a:visited {
-  text-decoration: underline;
+li a:hover {
+  border-bottom: 2px solid white;
+  padding-bottom: 0.2rem;
+}
+
+li a:focus {
+  outline: none;
+  border-bottom: 2px solid white;
+  padding-bottom: 0.2rem;
+}
+
+li a:active {
+  transform: scale(0.97);
 }
