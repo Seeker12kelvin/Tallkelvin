@@ -1,10 +1,15 @@
 import React from 'react'
 import './home.module.css'
 import Header from "./header"
+
+import { FaFacebook } from 'react-icons/fa6'
+import { FaLinkedinIn, FaPinterest, FaTwitter, FaWhatsapp } from 'react-icons/fa'
+import { FaInstagram } from 'react-icons/fa'
+
 import { DiPhotoshop } from "react-icons/di"
 import { DiIllustrator } from "react-icons/di"
-import { TbBrandAdobeIndesign } from "react-icons/tb"
-import { TbBrandAdobePremier } from "react-icons/tb"
+import { FaFigma } from "react-icons/fa"
+import { TbBrandAdobeXd } from "react-icons/tb";
 
 import { MdGames } from "react-icons/md"
 import { MdOutlineLocalMovies } from "react-icons/md"
@@ -14,17 +19,26 @@ import { CiBasketball } from "react-icons/ci"
 
 
 const Home = () => {
+
+  const [entering, setEntering] = React.useState('animate-bounce')
+  const [enteringO, setEnteringO] = React.useState('animate-bounce')
+  const [enteringT, setEnteringT] = React.useState('animate-bounce')
+  const [enteringTH, setEnteringTH] = React.useState('animate-bounce')
+  const [enteringF, setEnteringF] = React.useState('animate-bounce')
+  const [enteringFI, setEnteringFI] = React.useState('animate-bounce')
+  
   return (
     <div className='bg-[url(32993994_840843081452.jpg)] flex flex-col bg-cover bg-no-repeat h-screen w-screen'>
+
       <Header />
 
-      <main>
+      <main className='h-screen w-screen'>
 
-        <section id='home' className='h-screen w-screen flex pl-30 justify-start place-content-center items-center text-white'>
-          <div className='flex flex-col gap-10'>
+        <section id='home' className='h-full w-full flex flex-col relative pl-30 items-start place-content-center text-white'>
+          <div className='flex flex-col justify-self-center gap-10'>
             <div>
               <h1 className='text-6xl'>MADUEKE <br /> <span className='font-bold text-9xl'>KELVIN</span></h1>
-              <p className='text-2xl w-full tracking-[3px]'>UI/UX and Graphic Designer</p>
+              <p className='text-xl w-full tracking-[3px]'>UI/UX and Graphic Designer</p>
             </div>
             <div className='flex gap-5.5'>
               <button className='border-2 border-[cyan] text-2xl rounded-2xl pl-13 cursor-pointer p-2 pr-13'>Resume</button>
@@ -66,7 +80,7 @@ const Home = () => {
 
         </section>
 
-        <section id='resume' className='h-screen w-screen bg-[#00ffff10] flex justify-between text-white p-10'>
+        <section id='resume' className='h-screen w-screen bg-[#00ffff10] flex justify-between gap text-white pt-23 p-30'>
           <div>
             <div className='mb-20'>
               <h2 className='font-bold tracking-[3px] border-b-3 border-[cyan] pb-2 mb-5 w-fit text-2xl'>SOFTWARE SKILLS</h2>
@@ -95,8 +109,8 @@ const Home = () => {
 
                 </div>
                 <div className='flex items-center gap-10'>
-                  <TbBrandAdobeIndesign  className='text-4xl'/>
-                  <p>Indesign</p>
+                  <TbBrandAdobeXd  className='text-4xl'/>
+                  <p>Adobe XD</p>
                   <div className='relative'>
                     <div className='w-40 h-px border'></div>
                     <div className='p-[3px] rounded-[50%] -top-1.5 left-34 border absolute z-2'>
@@ -106,11 +120,11 @@ const Home = () => {
               
                 </div>
                 <div className='flex items-center gap-10'>
-                  <TbBrandAdobePremier className='text-4xl' />
-                  <p>Premier</p>
+                  <FaFigma className='text-4xl' />
+                  <p>Figma</p>
                   <div className='relative'>
                     <div className='w-40 h-px border'></div>
-                    <div className='p-[3px] rounded-[50%] -top-1.5 left-25 border absolute z-2'>
+                    <div className='p-[3px] rounded-[50%] -top-1.5 left-35 border absolute z-2'>
                       <div className='w-1.5 h-1.5 bg-white rounded-[50%]'></div>
                     </div>
                   </div>
@@ -134,30 +148,6 @@ const Home = () => {
                   </div>
 
                 </div>
-
-                <div className='flex items-center gap-30'>
-                  <p>Arabic</p>
-                  <div className='relative'>
-                    <div className='w-40 h-px border'></div>
-                    <div className='p-[3px] rounded-[50%] -top-1.5 left-34 border absolute z-2'>
-                      <div className='w-1.5 h-1.5 bg-white rounded-[50%]'></div>
-                    </div>
-                  </div>
-
-                </div>
-
-
-                <div className='flex items-center gap-30'>
-
-                    <p>Turkish</p>
-                    <div className='relative'>
-                      <div className='w-40 h-px border'></div>
-                      <div className='p-[3px] rounded-[50%] -top-1.5 left-25 border absolute z-2'>
-                        <div className='w-1.5 h-1.5 bg-white rounded-[50%]'></div>
-                      </div>
-                    </div>
-
-                </div>
               </div>
             </div>
             
@@ -172,10 +162,10 @@ const Home = () => {
           </div>
 
 
-          <div className='flex flex-col gap-20'>
+          <div className='flex flex-col gap-20 -mr-20'>
             <div>
               <h2 className='font-bold tracking-[3px] border-b-3 border-[cyan] pb-2 mb-5 w-fit text-2xl'>EDUCATION</h2>
-              <h3 className='text-xl'>Bs/Computer Science,</h3>
+              <h3 className='text-xl'>Bs in Software Engineering,</h3>
               <p className='opacity-70'>Lead City university</p>
             </div>
 
@@ -233,6 +223,30 @@ const Home = () => {
             </div>
           </div>
 
+        </section>
+
+        <section id='contact' className='flex justify-between text-white p-30'>
+          <div className='flex flex-col gap-10 w-[700px]'>
+            <h1 className='text-6xl pb-2 border-[cyan] border-b-4 w-fit'>Get in touch</h1>
+            <p className='text-[17px] leading-8 tracking-widest'>
+              Are you looking for a fast-performing and user-friendly website/app to
+              represent your product or business? or looking for any kind of
+              consultation? or want to ask questions? or have some advice for me
+              or just want to say "Hi 👋" in any case feel free to Let me know. I
+              will do my best to respond back. 😊 The quickest way to reach out to
+              me is via an email.
+            </p>
+            <button className='text-xl w-fit border-[cyan] border-2 rounded-2xl p-4'><a href='mailto:Maduekeugonna2@gmail.com'>Maduekeugonna2@gmail.com</a></button>
+          </div>
+          
+          <div className=' w-[430px] flex flex-wrap gap-5 text-9xl'>
+            <FaFacebook onMouseEnter={() => setEntering('')} onMouseLeave={() => setEntering('animate-bounce')} className={`cursor-pointer ${entering}`} />
+            <FaLinkedinIn onMouseEnter={() => setEnteringO('')} onMouseLeave={() => setEnteringO('animate-bounce')} className={`cursor-pointer ${enteringO}`} />
+            <FaInstagram onMouseEnter={() => setEnteringT('')} onMouseLeave={() => setEnteringT('animate-bounce')} className={`cursor-pointer ${enteringT}`} />
+            <FaPinterest onMouseEnter={() => setEnteringTH('')} onMouseLeave={() => setEnteringTH('animate-bounce')} className={`cursor-pointer ${enteringTH}`} />
+            <FaTwitter onMouseEnter={() => setEnteringF('')} onMouseLeave={() => setEnteringF('animate-bounce')} className={`cursor-pointer ${enteringF}`} />
+            <FaWhatsapp onMouseEnter={() => setEnteringFI('')} onMouseLeave={() => setEnteringFI('animate-bounce')} className={`cursor-pointer ${enteringFI}`} />
+          </div>
         </section>
 
       </main>

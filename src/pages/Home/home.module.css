@@ -25,3 +25,14 @@ li a:focus {
 li a:active {
   transform: scale(0.97);
 }
+
+
+@keyframes hover {
+  0%{
+    transform: translateY(0px);
+  }
+
+  100%{
+    transform: translateY(-5px);
+  }
+}
