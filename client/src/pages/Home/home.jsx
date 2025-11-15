@@ -1,6 +1,7 @@
 import React from 'react'
 import './home.module.css'
 import Header from "./header"
+import img from "../../../WhatsApp Image 2025-11-07 at 22.05 Background Removed.28.png"
 
 import { FaFacebook } from 'react-icons/fa6'
 import { FaLinkedinIn, FaPinterest, FaTwitter, FaWhatsapp } from 'react-icons/fa'
@@ -55,14 +56,14 @@ const Home = () => {
             <div className='bg-[#00ffff21] h-full w-2xs'></div>
           </div>
 
-          <div className='flex flex-col gap-20 left-30 w-96 z-4 absolute'>
+          <div className='flex flex-col gap-20 left-30 w-[50%] z-4 absolute'>
             <div className='flex flex-col items-center gap-4'>
               <h1 className='border-b-4 border-b-[cyan] pb-2 w-fit text-5xl'>ABOUT</h1>
               <h2 className='text-xl border-b-[cyan] border-b-2'> <a href='mailto:Maduekeugonna2@gmail.com' className='text-white'>Maduekeugonna2@gmail.com</a></h2>
             </div>
 
-            <div>
-              <p className='text-[17px] font-normal text-center'>I’m a UI/UX and graphic designer with a little over a year of experience in app and web design, as well as illustrations.
+            <div className='w-full'>
+              <p className='text-[17px] w-full font-normal text-center'>I’m a UI/UX and graphic designer with a little over a year of experience in app and web design, as well as illustrations.
                  I love creating clean, user-friendly designs that make digital experiences feel effortless. I’m adaptable and empathetic, which helps me understand users’ 
                  needs and design meaningful solutions. Alongside UI/UX, I also enjoy graphic design and illustration, bringing creativity and personality into every project I work on.
               </p>
@@ -72,11 +73,13 @@ const Home = () => {
               <p>Lagos, Nigeria</p>
               <div className='w-fit flex items-center gap-2'>
                 <div className='h-0.5 w-10 border border-[lightblue] '></div>
-                  <p className='flex'>Surule Somethinggg</p>
+                  <p className='flex'>15 Ikpoh, Street off olatilewa Surulere, Lagos</p>
                 <div className='h-0.5 w-10 border border-[lightblue] '></div>
               </div>
             </div>
           </div>
+
+          <img src={img} className='scale-[0.5]' />
 
         </section>
 
@@ -240,12 +243,12 @@ const Home = () => {
           </div>
           
           <div className=' w-[430px] flex flex-wrap gap-5 text-9xl'>
-            <FaFacebook onMouseEnter={() => setEntering('')} onMouseLeave={() => setEntering('animate-bounce')} className={`cursor-pointer ${entering}`} />
-            <FaLinkedinIn onMouseEnter={() => setEnteringO('')} onMouseLeave={() => setEnteringO('animate-bounce')} className={`cursor-pointer ${enteringO}`} />
-            <FaInstagram onMouseEnter={() => setEnteringT('')} onMouseLeave={() => setEnteringT('animate-bounce')} className={`cursor-pointer ${enteringT}`} />
-            <FaPinterest onMouseEnter={() => setEnteringTH('')} onMouseLeave={() => setEnteringTH('animate-bounce')} className={`cursor-pointer ${enteringTH}`} />
-            <FaTwitter onMouseEnter={() => setEnteringF('')} onMouseLeave={() => setEnteringF('animate-bounce')} className={`cursor-pointer ${enteringF}`} />
-            <FaWhatsapp onMouseEnter={() => setEnteringFI('')} onMouseLeave={() => setEnteringFI('animate-bounce')} className={`cursor-pointer ${enteringFI}`} />
+            <a target='_blank' href='https://www.facebook.com/share/17FLqcPnXp/'><FaFacebook onMouseEnter={() => setEntering('')} onMouseLeave={() => setEntering('animate-bounce')} className={`cursor-pointer ${entering}`} /></a>
+            <a target='_blank' href=''><FaLinkedinIn onMouseEnter={() => setEnteringO('')} onMouseLeave={() => setEnteringO('animate-bounce')} className={`cursor-pointer ${enteringO}`} /></a>
+            <a target='_blank' href='https://www.instagram.com/kelvin16_kd?igsh=MWVpOHp6aDI0ZHdhcQ=='><FaInstagram onMouseEnter={() => setEnteringT('')} onMouseLeave={() => setEnteringT('animate-bounce')} className={`cursor-pointer ${enteringT}`} /></a>
+            <a target='_blank' href='https://pin.it/72NRA1osy'><FaPinterest onMouseEnter={() => setEnteringTH('')} onMouseLeave={() => setEnteringTH('animate-bounce')} className={`cursor-pointer ${enteringTH}`} /></a>
+            <a target='_blank' href='https://x.com/Kelvin_Madueke?t=zmhMp6hmRNbUslcm-DP4sg&s=08'><FaTwitter onMouseEnter={() => setEnteringF('')} onMouseLeave={() => setEnteringF('animate-bounce')} className={`cursor-pointer ${enteringF}`} /></a>
+            <a target='_blank' href='https://wa.me/qr/2SUU4Z4JR4FWB1'><FaWhatsapp onMouseEnter={() => setEnteringFI('')} onMouseLeave={() => setEnteringFI('animate-bounce')} className={`cursor-pointer ${enteringFI}`} /></a>
           </div>
         </section>
 
