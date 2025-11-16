@@ -1,7 +1,8 @@
 import React from 'react'
 import './home.module.css'
 import Header from "./header"
-import img from "../../../WhatsApp Image 2025-11-07 at 22.05 Background Removed.28.png"
+import img from "../../assets/WhatsApp Image 2025-11-16 at 01.18.28.jpeg"
+import bgPic from "../../assets/32993994_840843081452.jpg"
 
 import { FaFacebook } from 'react-icons/fa6'
 import { FaLinkedinIn, FaPinterest, FaTwitter, FaWhatsapp } from 'react-icons/fa'
@@ -29,7 +30,7 @@ const Home = () => {
   const [enteringFI, setEnteringFI] = React.useState('animate-bounce')
   
   return (
-    <div className='bg-[url(32993994_840843081452.jpg)] flex flex-col bg-cover bg-no-repeat h-screen w-screen'>
+    <div style={{backgroundImage: `url(${bgPic})`}} className='flex flex-col bg-cover bg-no-repeat h-screen w-screen'>
 
       <Header />
 
@@ -79,7 +80,7 @@ const Home = () => {
             </div>
           </div>
 
-          <img src={img} className='scale-[0.5]' />
+          <img src={img} className='scale-[0.8] -ml-[86.2px]' />
 
         </section>
 
